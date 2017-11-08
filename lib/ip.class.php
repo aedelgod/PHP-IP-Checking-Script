@@ -1,6 +1,5 @@
 <?php
 
-
 class IP {
 	
 public function get_ip() {
@@ -57,12 +56,11 @@ public function get_hostname() {
 
 
 /* return Operating System */
-    function operating_system_detection(){
-    if ( isset( $_SERVER ) ) {
-    $agent = $_SERVER['HTTP_USER_AGENT'] ;
-    }
-    else {
-    global $HTTP_SERVER_VARS ;
+public function operating_system_detection(){
+if ( isset( $_SERVER ) ) {
+$agent = $_SERVER['HTTP_USER_AGENT'] ;
+ } else {
+global $HTTP_SERVER_VARS ;
     if ( isset( $HTTP_SERVER_VARS ) ) {
     $agent = $HTTP_SERVER_VARS['HTTP_USER_AGENT'] ;
     }
@@ -79,6 +77,8 @@ public function get_hostname() {
     $ros[] = array('Windows NT 5.2', 'Windows Server 2003');
     $ros[] = array('Windows NT 6.0', 'Windows Vista');
     $ros[] = array('Windows NT 7.0', 'Windows 7');
+    $ros[] = array('Windows NT 6.3', 'Windows 8.1'); //woooooooow look at that kernel
+    $ros[] = array('Windows NT 10.0', 'Windows 10');	
     $ros[] = array('Windows CE', 'Windows CE');
     $ros[] = array('(media center pc).([0-9]{1,2}\.[0-9]{1,2})', 'Windows Media Center');
     $ros[] = array('(win)([0-9]{1,2}\.[0-9x]{1,2})', 'Windows');
