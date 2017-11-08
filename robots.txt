@@ -1,0 +1,3 @@
+Sitemap: https://myipiswhat.com/sitemap.xml
+User-Agent: *
+Disallow:
